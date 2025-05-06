@@ -49,7 +49,7 @@ numerosOrdenados.forEach(function(elemento){
 });
 
 function signoMes(){
-let mes = document.getElementById("mes").value;  
+let mes = document.getElementById("mes");  
 let signo; //creamos una variable en la cual se va a almacenar el signo según el mes
 switch (mes){
     case "enero":  
@@ -91,6 +91,7 @@ switch (mes){
     default : signo = "Desconocido"
 
 }    
+document.getElementById("mes").innerText = "Tu signo es " + signo;
 }
 
 //EJERCICIO 8 
