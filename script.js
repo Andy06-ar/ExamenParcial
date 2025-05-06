@@ -43,13 +43,9 @@ edad.forEach(function(elemento, indice, array){
 
 console.log("***********SEXTO EJERCICIO*********")
 let numerosOrdenados = [3,1,4,1,5,9,2,7,6]
-let contador;
-numerosOrdenados.forEach(function(elemento, indice,){
-   if(elemento <= elemento){
-       contador =- 1   
-       console.log(elemento)     
-   }
-
+numerosOrdenados.sort(function(a,b){return a-b});
+numerosOrdenados.forEach(function(elemento){
+    console.log(elemento)
 });
 
 function signoMes(){
@@ -95,4 +91,11 @@ switch (mes){
     default : signo = "Desconocido"
 
 }    
+}
+
+//EJERCICIO 8 
+function mostrarPrecio() {
+    const select = document.getElementById("boletos");
+    const precio = select.value;
+    document.getElementById("precio").textContent = "El precio del boleto seleccionado es $" + precio;
 }
